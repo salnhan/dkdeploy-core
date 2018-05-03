@@ -7,7 +7,7 @@ module Dkdeploy
     # DB related helpers
     module DB
       def db_dump_file(infix = '')
-        date = DateTime.now.strftime(datetime_format)
+        date = Time.now.strftime(datetime_format)
         ['database', fetch(:stage), infix, date].join('-') << '.sql'
       end
 
